@@ -8,7 +8,7 @@ import { isAdmin } from "../middleware/isAdmin.middleware.js";
 const router = Router();
 
 router.route("/add-product").post(verifyJwt , isAdmin , upload.single('image') , addProduct)
-router.route("/delete-product").delete(verifyJwt ,deleteProduct)
+router.route("/delete-product").delete(verifyJwt , isAdmin ,deleteProduct)
 router.route("/update-product").patch(verifyJwt ,updateProduct)
 router.route("/all-products").get(getAllProducts)
 
