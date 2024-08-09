@@ -8,9 +8,9 @@ app.use(cors({
     // origin: process.env.CORS_ORIGIN, //telling ki kaha frontend prr api allow krni hai
     origin:'*',
     credentials: true,
-    allowedHeaders: [
-        'Content-Type',
-      ],
+    // allowedHeaders: [
+    //     'Content-Type',
+    //   ],
 }))
 
 app.use(express.json({limit: "16kb"}))
