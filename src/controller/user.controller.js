@@ -126,7 +126,8 @@ const loginUser = asyncHandler(async (req, res) => {
   //making sure ki cookie frontend se koi ched chaad na kar paye
   const options = {
     httpOnly: true,
-    // secure: true,
+    sameSite:"none",
+    secure: true,
   };
 
   //cookie parsor
@@ -163,6 +164,7 @@ await User.findByIdAndUpdate(
     
         const options = {
           httpOnly: true,
+          sameSite:"none",
           secure: true,
         };
     
@@ -200,7 +202,8 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
 
     const options = {
       httpOnly: true,
-    //   secure: true,
+      sameSite:"none",
+      secure: true,
     };
 
     const { accessToken, refreshToken } = await generateAccessAndRefreshToken(
