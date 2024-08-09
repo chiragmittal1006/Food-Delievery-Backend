@@ -6,7 +6,7 @@ const app = express()
 
 app.use(cors({
     // origin: process.env.CORS_ORIGIN, //telling ki kaha frontend prr api allow krni hai
-    origin: 'http://localhost:3000',
+    origin: ['https://food-delievery-frontend-z9ma.onrender.com/','https://food-delievery-frontend-ba6n7jmoq-chirags-projects-fbbed144.vercel.app/'],
     credentials: true,
     // allowedHeaders , content-type , 
 }))
