@@ -6,7 +6,7 @@ const app = express()
 
 app.use(cors({
     // origin: process.env.CORS_ORIGIN, //telling ki kaha frontend prr api allow krni hai
-    origin:'https://food-delievery-frontend-ba6n7jmoq-chirags-projects-fbbed144.vercel.app',
+    origin:'https://food-delievery-frontend.vercel.app',
     credentials: true,
     // allowedHeaders: [
     //     'Content-Type',
